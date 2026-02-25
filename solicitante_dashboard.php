@@ -6,99 +6,59 @@
     <title>SGM - Painel do Solicitante</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
 </head>
-<body>
+<body class="bg-light">
 
-    <header>
-        <nav class="navbar navbar-expand-lg bg-success shadow-sm">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#conteudoNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="conteudoNavbar">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link text-white active" href="#">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Minhas Solicitações</a>
-                        </li>
-                    </ul>
-                    
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
-                        <a href="api/logout.php" class="btn btn-outline-light">Sair</a>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="container my-5">
-        <div class="row mb-4">
-            <div class="col-12">
-                <h2 class="text-dark border-bottom pb-2">Bem-vindo, Solicitante</h2>
+    <nav class="navbar navbar-dark shadow-sm mb-4" style="background-color: #2563eb;">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-tools me-2"></i>SGM
+            </a>
+            <div class="d-flex align-items-center">
+                <span class="text-white me-3 d-none d-sm-inline">Olá, Solicitante</span>
+                <a href="api/logout.php" class="btn btn-outline-light btn-sm">Sair</a>
             </div>
         </div>
-<div class="card shadow-sm border-0">
-    <div class="card-body">
-        
+    </nav>
+
+    <main class="container">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="text-secondary fw-bold m-0">Minhas Solicitações</h3>
-            <button class="btn btn-success fw-semibold px-3">
-                <i class="bi bi-plus-lg"></i> Nova Solicitação
-            </button>
+            <h2 class="h4 fw-bold m-0 text-dark">Minhas Solicitações</h2>
+            <a href="solicitante_abrir_chamado.php" class="btn btn-primary shadow-sm">
+                <i class="bi bi-plus-lg me-1"></i> Nova Solicitação
+            </a>
         </div>
 
-        <div class="table-responsive">
-            <table class="table table-borderless align-middle">
-                <thead class="border-bottom">
-                    <tr class="text-dark">
-                        <th class="py-3">ID</th>
-                        <th class="py-3">Local</th>
-                        <th class="py-3">Tipo</th>
-                        <th class="py-3">Status</th>
-                        <th class="py-3">Data</th>
-                        <th class="py-3">Ação</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="border-bottom">
-                        <td class="fw-bold py-3">#01</td>
-                        <td>Bloco Administrativo - Recepção</td>
-                        <td>Porta Quebrada</td>
-                        <td>
-                            <span class="badge rounded-pill px-3 py-2 text-dark" style="background-color: #22bc3eff;">Aberto</span>
-                        </td>
-                        <td>28/01/2026</td>
-                        <td>
-                            <button class="btn btn-outline-primary btn-sm px-3">Detalhes</button>
-                        </td>
-                    </tr>
-                    <tr class="border-bottom">
-                        <td class="fw-bold py-3">#02</td>
-                        <td>Refeitório</td>
-                        <td>Luz Qyeimada</td>
-                        <td>
-                            <span class="badge rounded-pill px-3 py-2 bg-danger">Fechado</span>
-                        </td>
-                        <td>20/01/2026</td>
-                        <td>
-                            <button class="btn btn-outline-secondary btn-sm px-4">Ver</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-    </div>
-</div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th class="py-3 ps-4">ID</th>
+                                <th class="py-3">Informações</th>
+                                <th class="py-3">Status</th>
+                                <th class="py-3">Data</th>
+                                <th class="py-3 text-center">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ps-4 fw-bold text-muted">#05</td>
+                                <td>
+                                    <div class="fw-bold"><i class="bi bi-geo-alt me-1"></i>Sala 204</div>
+                                    <div class="small text-secondary">Ar-condicionado pingando</div>
+                                </td>
+                                <td>
+                                    <span class="badge bg-info text-dark">Em Aberto</span>
+                                </td>
+                                <td class="small text-muted">06/02/2026</td>
+                                <td class="text-center">
+                                    <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-search"></i> Ver</button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="ps-4 fw-bold text-muted">#04</td>
+                                <td>
+                                    <div class="fw-bold"><i class="bi bi-geo-alt
